@@ -33,7 +33,7 @@ proyecto-ml-hielo-antartico/
 
 ---
 
-## 🔍 Descripción de los Datasets
+##  Descripción de los Datasets
 
 ### 📄 1. Dataset de Temperatura - Ushuaia
 
