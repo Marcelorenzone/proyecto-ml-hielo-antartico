@@ -91,7 +91,7 @@ Se implementará un modelo de **clasificación binaria** usando algoritmos super
 
 ---
 
-## 🧠 Objetivo
+##  Objetivo
 
 Entrenar un modelo capaz de **predecir si un año será crítico o no**, en función de las temperaturas históricas registradas en Tierra del Fuego.
 
