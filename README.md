@@ -1,4 +1,4 @@
-# proyecto-ml-hielo-antartico# 🧊 Predicción de Años Críticos de Derretimiento del Hielo Antártico usando Temperaturas Históricas de Tierra del Fuego
+# proyecto-ml-hielo-antartico#  Predicción de Años Críticos de Derretimiento del Hielo Antártico usando Temperaturas Históricas de Tierra del Fuego
 
 **Autor:** Marcelo Renzone  
 **Materia:** Aprendizaje Automático  
@@ -60,7 +60,7 @@ proyecto-ml-hielo-antartico/
 
 ---
 
-## 🧾 Dataset Final para el Modelo
+##  Dataset Final para el Modelo
 
 **Archivo:** `processed/dataset_final.csv`
 
@@ -71,7 +71,7 @@ proyecto-ml-hielo-antartico/
 
 ---
 
-## 🤖 Tipo de Modelo
+##  Tipo de Modelo
 
 Se implementará un modelo de **clasificación binaria** usando algoritmos supervisados como:
 
@@ -82,7 +82,7 @@ Se implementará un modelo de **clasificación binaria** usando algoritmos super
 
 ---
 
-## 🛠️ Requisitos
+##  Requisitos
 
 - Python 3.10+
 - Pandas, NumPy, Scikit-learn
