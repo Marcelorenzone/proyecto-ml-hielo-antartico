@@ -4,7 +4,7 @@
 **Materia:** Aprendizaje Automático  
 **Carrera:** Tecnicatura en Análisis de Datos e Inteligencia Artificial  
 **Entrega:** Segunda instancia – Descripción y documentación del dataset  
-**Fecha:** [Completar]
+**Fecha:** desde el 26/05 al 01/05
 
 ---
 
