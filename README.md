@@ -13,16 +13,11 @@ proyecto_hielo_antartico_ml/
 ├── data/
 │ ├── raw/ # Datos originales
 │ └── processed/ # Dataset final limpio
+│                # Entrega3_informe_final_Marcelo_Renzone.txt
 │
 ├── notebooks/
 │ ├── analisis_exploratorio.ipynb
 │ └── modelo_clasificacion.ipynb
-│
-├── models/ # Modelos entrenados
-├── reports/
-│ └── figures/ # Gráficos generados
-├── src/ # Código fuente (opcional)
-├── tests/ # Tests (opcional)
 │
 ├── README.md
 ├── requirements.txt
