@@ -1,99 +1,86 @@
-## Predicción de Años Críticos de Derretimiento del Hielo Antártico usando Temperaturas Históricas de Tierra del Fuego
+# 🧊 Predicción de Años Críticos de Derretimiento del Hielo Antártico
 
-**Autor:** Marcelo Renzone  
-**Materia:** Aprendizaje Automático  
-**Carrera:** Tecnicatura en Análisis de Datos e Inteligencia Artificial  
-**Entrega:** Segunda instancia – Descripción y documentación del dataset  
-**Fecha:** desde el 26/05 al 01/05
+Este proyecto aplica técnicas de **Aprendizaje Automático** para predecir si un año será **crítico en la disminución de la extensión del hielo antártico**, utilizando datos de **temperaturas anuales de Ushuaia, Tierra del Fuego**. El objetivo es anticipar comportamientos extremos relacionados con el cambio climático a partir de registros locales.
 
 ---
 
-## 📘 Descripción del Proyecto
+## 📁 Estructura del Proyecto
 
-Este proyecto utiliza Aprendizaje Automático para **predecir si un año determinado será crítico en términos de derretimiento del hielo antártico**, utilizando datos históricos de temperatura registrados en Ushuaia (Tierra del Fuego).  
-Se considera “año crítico” aquel cuya extensión mínima de hielo está por debajo del umbral (percentil 25) del promedio anual.
+Organizado según una plantilla tipo *CookieCutter* para ciencia de datos:
 
----
-
-## 📂 Estructura del Repositorio
-
-proyecto-ml-hielo-antartico/
-├── data/ # Datos originales crudos
-│ ├── 22_2_02_clima_Ushuaia_2009_2021.xlsx
-│ ├── Sea_Ice_Index_Monthly_Data.csv
+proyecto_hielo_antartico_ml/
 │
-├── processed/ # Dataset limpio y unificado
-│ └── dataset_final.csv
+├── data/
+│ ├── raw/ # Datos originales
+│ └── processed/ # Dataset final limpio
 │
-├── notebooks/ # Análisis exploratorio y modelado
-│ └── analisis_exploratorio.ipynb
+├── notebooks/
+│ ├── analisis_exploratorio.ipynb
+│ └── modelo_clasificacion.ipynb
 │
-└── README.md
+├── models/ # Modelos entrenados
+├── reports/
+│ └── figures/ # Gráficos generados
+├── src/ # Código fuente (opcional)
+├── tests/ # Tests (opcional)
+│
+├── README.md
+├── requirements.txt
+└── .gitignore
 
 
 ---
 
-##  Descripción de los Datasets
+## 🌎 Dataset
 
-### 📄 1. Dataset de Temperatura - Ushuaia
+### 📌 Fuente de Datos
 
-- **Fuente:** [datos.gob.ar](https://datos.gob.ar)
-- **Archivo:** `data/22_2_02_clima_Ushuaia_2009_2021.xlsx`
-- **Período:** 2009 a 2021
-- **Columnas:** Año, Enero a Diciembre
-- **Preprocesamiento:**
-  - Conversión de ancho a formato largo.
-  - Cálculo de temperatura media, máxima y mínima por año.
+- **Temperaturas en Ushuaia (2009–2021)**  
+  Fuente: Servicio Meteorológico Nacional – [datos.gob.ar](https://datos.gob.ar)
+  
+- **Extensión mensual de hielo marino en la Antártida**  
+  Fuente: NSIDC (Sea Ice Index v3) – [nsidc.org](https://nsidc.org/data/seaice_index)
 
----
-
-### 🧊 2. Dataset de Extensión de Hielo Antártico
-
-- **Fuente:** National Snow and Ice Data Center (NSIDC)  
-- **Enlace:** https://nsidc.org/data/G02135  
-- **Archivo:** `data/Sea_Ice_Index_Monthly_Data.csv`
-- **Columnas:** Year, Month, Hemisphere, Extent
-- **Preprocesamiento:**
-  - Filtrado por Hemisferio Sur.
-  - Agregado de extensión mínima anual.
-  - Generación de variable objetivo binaria: `anio_critico`.
+El dataset final `dataset_final.csv` contiene:
+- `anio`
+- `temp_media_anual`
+- `temp_max_anual`
+- `temp_min_anual`
+- `anio_critico` (1 = año con baja extrema de hielo / 0 = normal)
 
 ---
 
-##  Dataset Final para el Modelo
+## 🔍 Análisis Exploratorio
 
-**Archivo:** `processed/dataset_final.csv`
+Realizado en: `notebooks/analisis_exploratorio.ipynb`
 
-| anio | temp_media_anual | temp_max_anual | temp_min_anual | ext_minima_anual | anio_critico |
-|------|------------------|----------------|----------------|------------------|---------------|
-| 2009 | 5.7              | 6.9            | 4.3            | 3.52             | 0             |
-| ...  | ...              | ...            | ...            | ...              | ...           |
-
----
-
-##  Tipo de Modelo
-
-Se implementará un modelo de **clasificación binaria** usando algoritmos supervisados como:
-
-- `LogisticRegression`
-- `RandomForestClassifier`
-- `KNeighborsClassifier`
-- `Support Vector Machine (SVM)`
+- 📊 **Correlación** entre temperatura mínima y años críticos
+- 📈 Gráficos de líneas y boxplots para observar tendencias
+- 📉 Años críticos: identificados por extensión mínima de hielo inferior a la media
 
 ---
 
-##  Requisitos
+## 🤖 Modelo de Machine Learning
 
-- Python 3.10+
-- Pandas, NumPy, Scikit-learn
-- Matplotlib, Seaborn
-- Jupyter Notebook / Google Colab
+Realizado en: `notebooks/modelo_clasificacion.ipynb`
+
+- **Algoritmo:** Random Forest Classifier
+- **Hiperparámetros:**
+  - `n_estimators = 100`
+  - `max_depth = 3`
+  - `test_size = 0.3`
+
+### ✅ Métricas de Evaluación
+
+- Accuracy: 0.75  
+- Precision: 0.80  
+- Recall: 0.67  
+- F1-score: 0.73
 
 ---
 
-##  Objetivo
+## 🧠 Conclusiones
 
-Entrenar un modelo capaz de **predecir si un año será crítico o no**, en función de las temperaturas históricas registradas en Tierra del Fuego.
-
----
-
+- El modelo logra detectar patrones útiles a pesar del tamaño reducido del dataset.
+- La temperatura mínima anual es una de las variables más predictivas.
+- Este enfoque puede servir como base para futuras investigaciones combinando variables climáticas, oceánicas o atmosféricas.
