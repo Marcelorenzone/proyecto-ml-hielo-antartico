@@ -19,6 +19,7 @@ proyecto_hielo_antartico_ml/
 │ ├── analisis_exploratorio.ipynb
 │ └── modelo_clasificacion.ipynb
 │
+├── video_presentacion.mp4 
 ├── README.md
 ├── requirements.txt
 └── .gitignore
