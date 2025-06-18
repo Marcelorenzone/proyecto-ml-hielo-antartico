@@ -1,4 +1,4 @@
-# 🧊 Predicción de Años Críticos de Derretimiento del Hielo Antártico
+#  Predicción de Años Críticos de Derretimiento del Hielo Antártico
 
 Este proyecto aplica técnicas de **Aprendizaje Automático** para predecir si un año será **crítico en la disminución de la extensión del hielo antártico**, utilizando datos de **temperaturas anuales de Ushuaia, Tierra del Fuego**. El objetivo es anticipar comportamientos extremos relacionados con el cambio climático a partir de registros locales.
 
@@ -31,7 +31,7 @@ proyecto_hielo_antartico_ml/
 
 ---
 
-## 🌎 Dataset
+##  Dataset
 
 ### 📌 Fuente de Datos
 
@@ -50,7 +50,7 @@ El dataset final `dataset_final.csv` contiene:
 
 ---
 
-## 🔍 Análisis Exploratorio
+##  Análisis Exploratorio
 
 Realizado en: `notebooks/analisis_exploratorio.ipynb`
 
@@ -60,7 +60,7 @@ Realizado en: `notebooks/analisis_exploratorio.ipynb`
 
 ---
 
-## 🤖 Modelo de Machine Learning
+##  Modelo de Machine Learning
 
 Realizado en: `notebooks/modelo_clasificacion.ipynb`
 
@@ -79,7 +79,7 @@ Realizado en: `notebooks/modelo_clasificacion.ipynb`
 
 ---
 
-## 🧠 Conclusiones
+##  Conclusiones
 
 - El modelo logra detectar patrones útiles a pesar del tamaño reducido del dataset.
 - La temperatura mínima anual es una de las variables más predictivas.
