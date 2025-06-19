@@ -90,3 +90,6 @@ Realizado en: `notebooks/modelo_clasificacion.ipynb`
   - Probar otros modelos (como SVM o XGBoost)
 
 
+## Enlace a video
+
+- https://drive.google.com/file/d/1I4BMlpDgw_qUTPxEzIjlUGik-qljCYei/view?usp=sharing
